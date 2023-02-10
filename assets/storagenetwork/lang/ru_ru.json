@@ -4,7 +4,7 @@
     "block.storagenetwork.kabel": "Сетевой кабель",
     "block.storagenetwork.kabel.guide": "Подключается только к блокам сети.",
     "block.storagenetwork.storage_kabel": "Кабель связи",
-    "block.storagenetwork.storage_kabel.guide": "Подключает один инвентарь к сети. Являются основной точкой подключения инвентарей к сети, без управления приоритетом или автоматизацией. Улучшается до $(l:filter_kabel)фильтрующей версии$(/l).",
+    "block.storagenetwork.storage_kabel.guide": "Подключает один инвентарь к сети. Является основной точкой подключения инвентарей к сети, без управления приоритетом или автоматизации. Улучшается до $(l:filter_kabel)фильтрующей версии$(/l).",
     "block.storagenetwork.export_kabel": "Кабель экспорта",
     "block.storagenetwork.export_kabel.guide": "При подключении к инвентарю - экспортирует предметы из сети в целевой инвентарь. Имеет настройки приоритета для порядка сортировки среди других кабелей экспорта, а также возможность управления сигналом красного камня. Поддерживает улучшения.",
     "block.storagenetwork.import_kabel": "Кабель импорта",
@@ -26,38 +26,38 @@
     "storagenetwork.guide.blocks.desc":"Все сетевые блоки нормально подключаются к любому сетевому кабелю или блоку и обеспечивают доступ или различные функции сети.",
     "storagenetwork.guide.cables":"Кабели",
     "storagenetwork.guide.cables.desc":"Кабели соединяют блоки и узлы в сеть. Действующая сеть должна иметь ровно один $(l:master)контроллер$(/l). Также понадобится как минимум 1 $(l:storage_kabel)кабель связи$(/l), подключённый к инвентарю.",
-    "storagenetwork.guide.getstarted.desc":"Various guide pages",
+    "storagenetwork.guide.getstarted.desc":"Различные страницы руководства",
     "page.storagenetwork.gs_setup.left":"Краткое руководство по началу работы с Simple Storage Network. Как только вы соберёте некоторые ингредиенты, несколько $(l:kabel)кабелей связи$(/l) и $(l:master)контроллер сети$(/l). Ваша сеть будет запущена, как только они будут размещены в мире. $(l:storage_kabel)Кабели связи$(/l) подключают сундук или другой инвентарь к сети. Для получения доступа, ознакомьтесь с $(l:inventory_remote)беспроводными$(/l) или $(l:request)обычными терминалами$(/l).",
     "page.storagenetwork.gs_setup.right":"Попробуйте использовать функцию закладок!",
     "page.storagenetwork.gs_priority.left":"Кабели сортируются по приоритету. Если интерфейс у кабеля отсутствует, как например у $(l:storge_kabel)кабеля связи$(/l), значение для этого кабеля равно нулю. Когда игрок выполняет запрос на вставку или извлечение в сеть, она будет пытаться использовать узлы с наименьшим приоритетом до тех пор, пока запрос не будет завершён.",
     "page.storagenetwork.gs_priority.right":"Для автоматизации импорта или экспорта обрабатываются все кабели, и приоритет определяет порядок каждый раз, одно действие стека на один тик на кабель.$(br2)По очереди используются узлы в следующем порядке: отсортируйте кабели по приоритету так, чтобы:$(li)наименьшие числа были первыми;$(li)равные числа были вместе;$(li)например: [-2, -2, 0, 0, 1, 2, 4]",
 
-    "page.storagenetwork.gs_chunks.left":"Any network is only running in the world if its $(l:master)Root Node$(/l) is in a loaded chunk of the world. Endpoint cables in the network such as $(l:storage_kabel)Link cables$(/l) may be in a different chunk than the network root, and may be individually disconnected depending on their own chunk. You can have multiple networks per chunk, world, or dimension.",
-    "page.storagenetwork.gs_chunks.right":"$(li)Spread Example: so its possible for a network to have 20 link cables but 5 are in an unloaded chunk. Network screens/remotes will still open since the root is loaded, any contents from those unloaded cables are not seen. $(li)Remote example: I build my storage network far away from $(t:which are always loaded)spawn chunks$(/t), in a distant ocean base. When I go to the nether, the overworld chunks with the Root block are unloaded, so my $(l:inventory_remote)Remotes$(/l) cannot connect",
+    "page.storagenetwork.gs_chunks.left":"Любая сеть работает в мире, только если её $(l:master)контроллер$(/l) находится в загруженном чанке. Конечные кабели в сети, такие как $(l:storage_kabel)кабели связи$(/l) могут находиться в другом чанке, нежели контроллер, и могут быть индивидуально отключены в зависимости от их собственного чанка. Вы можете иметь несколько сетей в одном чанке, мире или измерении.",
+    "page.storagenetwork.gs_chunks.right":"$(li)Пример распространения: в сети может быть 20 кабелей связи, но 5 из них находятся в незагруженном чанке. $(li)Дистанционный пример: Я строю свою сеть хранения далеко от $(t:which are always loaded)спаун чанков$(/t), на далёкой океанской базе. Когда я отправляюсь в нижний мир, чанк с контроллером выгружается и я не могу использовать свой $(l:inventory_remote)беспроводной терминал$(/l), так как он не может подключится к системе.",
 
     "block.storagenetwork.master": "Контроллер сети хранения",
-    "block.storagenetwork.master.tooltip": "Use only one per network",
-    "block.storagenetwork.master.guide": "The main heart of the network. Only ONE per network, Placing more will cause one of them to break, and may cause network connection issues for remotes and cables. Moving the root node to a new place will break the network, interrupting imports, exports, and remotes. Multiple networks per world and dimension are fine as long as they are not connected to each other",
+    "block.storagenetwork.master.tooltip": "Используйте только один на сеть",
+    "block.storagenetwork.master.guide": "Главное сердце сети. Только ОДИН на сеть, размещение большего количества приведёт к выпадению одного из них и может вызвать проблемы с подключением к сети пультов и кабелей. Перемещение контроллера в другое место приведёт к разрыву сети, прерыванию импорта, экспорта и удалённых соединений. Несколько сетей в мире и измерении - это нормально, если они не связаны друг с другом.",
 
     "block.storagenetwork.request": "Терминал крафта",
-    "block.storagenetwork.request.guide": "Views the network inventory with full access to scroll, withdraw, and deposit items. Custom crafting grid that pulls ingredients from the network. See the $(l:crafting_remote)Remote version here$(/l)",
-    "block.storagenetwork.request.tooltip": "Used to overview and request items from the network",
+    "block.storagenetwork.request.guide": "Просмотр сетевого инвентаря с полным доступом к прокрутке, взятию и помещению предметов. Встроенный верстак забирает предметы из сети. Читайте про $(l:crafting_remote)беспроводную версию$(/l).",
+    "block.storagenetwork.request.tooltip": "Используется для обзора и запроса предметов в сети",
 
     "block.storagenetwork.inventory": "Терминал",
-    "block.storagenetwork.inventory.guide": "Views the network inventory with full access to scroll, withdraw, and deposit items. See the $(l:inventory_remote)Remote version here$(/l)",
-    "block.storagenetwork.inventory.tooltip": "Inventory access without a crafting grid",
+    "block.storagenetwork.inventory.guide": "Просмотр сетевого инвентаря с полным доступом к прокрутке, взятию и помещению предметов. Читайте про $(l:inventory_remote)беспроводную версию$(/l).",
+    "block.storagenetwork.inventory.tooltip": "Доступ к инвентарю без сетки крафта",
 
     "block.storagenetwork.exchange": "Интерфейс расширения сети",
-    "block.storagenetwork.exchange.guide": "This exposes the network and acts as a controller for other automation systems or storage solutions. For example, a normal Hopper placed pointing at an Exchange Interface on a network, and it will insert the items into valid network slots as normal, similar to the $(l:import_kabel)Import Cable$(/l). A Hopper below will export arbitrary items. Try this with other storage mods!",
-    "block.storagenetwork.exchange.tooltip": "Endpoint of the network for inventory connections",
+    "block.storagenetwork.exchange.guide": "Это открывает доступ к сети и действует как контроллер для других систем автоматизации или систем хранения. Например, обычная воронка, поставленная на интерфейс в сети, будет помещать предметы в сеть, аналогично $(l:import_kabel)кабелю импорта$(/l). Воронка внизу будет брать произвольные предметы. Попробуйте это с другими модами хранения!",
+    "block.storagenetwork.exchange.tooltip": "Конечная точка сети для подключения других систем",
 
     "block.storagenetwork.collector": "Сетевой интерфейс сбора",
-    "block.storagenetwork.collector.guide": "This exposes the network and acts as an insert-only controller for other automation systems or storage solutions. For example, a normal Hopper placed pointing at an Exchange Interface on a network, and it will insert the items into valid network slots as normal, similar to the $(l:import_kabel)Import Cable$(/l). Does not allow any item extraction. Try this with other storage mods!",
-    "block.storagenetwork.collector.tooltip": "Items inserted enter the network",
+    "block.storagenetwork.collector.guide": "Это раскрывает сеть и действует как контроллер только для вставки из других систем автоматизации или систем хранения. Например, обычная воронка, поставленная на интерфейс в сети, будет помещать предметы в сеть, аналогично $(l:import_kabel)кабелю импорта$(/l). Не позволяет извлекать предметы. Попробуйте это с другими модами хранения!",
+    "block.storagenetwork.collector.tooltip": "Вставляемые предметы попадают в сеть",
 
     "item.storagenetwork.speed_upgrade": "Улучшение: §3Скорость",
-    "item.storagenetwork.speed_upgrade.guide": "This upgrade can be placed in cables. Increases the speed of imports, which normally do not happen every tick. by decreasing the tick delay between operations. Will cause any Slowness upgrades to be ignored if both are present.",
-    "item.storagenetwork.speed_upgrade.tooltip": "Increases the speed of importing/exporting",
+    "item.storagenetwork.speed_upgrade.guide": "Это улучшение может быть размещено в кабелях. Увеличивает скорость импорта, который обычно происходит не каждый тик, уменьшая задержку между операциями. Игнорирует все улучшения 'Замедление', если оба установлены.",
+    "item.storagenetwork.speed_upgrade.tooltip": "Увеличивает скорость импорта/экспорта",
 
     "item.storagenetwork.operation_upgrade": "Улучшение: §3Операции",
     "item.storagenetwork.operation_upgrade.tooltip": "Обработка количества предметов в фильтре; может перекрывать другие улучшения",
@@ -87,11 +87,11 @@
     "item.storagenetwork.inventory_remote": "Беспроводной терминал",
     "item.storagenetwork.inventory_remote.tooltip": "Используйте на контроллере сети для удалённого доступа к инвентарю",
     "item.storagenetwork.inventory_remote.guide": "Полный удалённый доступ к сети, не ограниченный диапазоном или измерением. Похож на $(l:inventory)терминал$(/l). Также открывается привязанной клавишей.",
-    
+
     "item.storagenetwork.crafting_remote": "Беспроводной терминал создания",
     "item.storagenetwork.crafting_remote.tooltip": "Используйте на контроллере сети для удалённого доступа к инвентарю",
     "item.storagenetwork.crafting_remote.guide": "Полный удалённый доступ к сети, не ограниченный диапазоном или измерением. Имеет встроенный верстак. Похож на $(l:request)терминал крафта$(/l).",
-    
+
     "item.storagenetwork.picker_remote": "Беспроводной получатель",
     "item.storagenetwork.picker_remote.tooltip": "Нажатие на блок приведёт к извлечению соответствующих блоков из сети",
     "item.storagenetwork.picker_remote.guide": "Получатель привязывается как обычный беспроводной терминал, но не имеет интерфейса. Вместо этого нажмите этим предметом в мире на блок.  В зависимости от того, крадётесь вы или нет, вы получите один блок или стек блоков.",
@@ -156,12 +156,12 @@
 
     "tooltip.storagenetwork.kabel_P": "Может автоматизировать простые операции по обработке",
 
-    "block.storagenetwork.controller": "Controller",
+    "block.storagenetwork.controller": "Контроллер",
     "block.storagenetwork.controller.tooltip": "Управление всеми технологическими кабелями в сети",
 
     "chat.main.emptyslots": "Потенциально незаполненных слотов: ",
-    "chat.main.connectables": "Подключено: ",
-    
+    "chat.main.connectables": "Узлы: ",
+
     "key.storagenetwork.remote":"Открытие удалённого доступа",
 
 	"gui.storagenetwork.operate.tooltip":"Операции отключены, если логическая проверка не прошла",
